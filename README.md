@@ -1,143 +1,114 @@
-🎬 Movie Recommendation System (Hybrid ML + Flask)
-📌 Overview
+# 🎬 Movie Recommendation System (Hybrid ML + Flask)
 
-The Movie Recommendation System is a machine learning–based web application that provides personalized movie suggestions to users.
-It combines content-based filtering and collaborative filtering techniques to recommend movies based on both movie attributes and user behavior.
+## 📌 Overview
 
-The project is built using Python, Machine Learning, and Flask, with a clean web interface using HTML, CSS, and JavaScript.
+The **Movie Recommendation System** is a machine learning–based web application that provides **personalized movie recommendations** to users.
 
-🚀 Features
+It implements a **hybrid recommendation approach**, combining:
+- **Content-Based Filtering** (movie features)
+- **Collaborative Filtering** (user behavior)
 
-✅ Content-Based Filtering using movie genres
+The application is built using **Python, Machine Learning, and Flask**, with a clean and interactive frontend developed using **HTML, CSS, and JavaScript**.
 
-✅ User-Based Collaborative Filtering using ratings data
+---
 
-✅ Hybrid Recommendation System for better accuracy
+## 🚀 Features
 
-✅ Flask-powered web application
+- ✅ Content-Based Filtering using movie genres  
+- ✅ User-Based Collaborative Filtering using ratings data  
+- ✅ Hybrid Recommendation System for improved accuracy  
+- ✅ Flask-powered backend  
+- ✅ Dropdown-based movie selection (prevents input errors)  
+- ✅ Clean and responsive UI  
+- ✅ Modular and scalable code structure  
 
-✅ Dropdown-based movie selection (prevents input errors)
+---
 
-✅ Clean and responsive UI
+## 🧠 Recommendation Techniques Used
 
-✅ Modular and scalable code structure
+### 1️⃣ Content-Based Filtering
+- TF-IDF Vectorization on movie genres  
+- Cosine Similarity for measuring movie similarity  
+- Recommends movies similar to a selected movie  
 
-🧠 Recommendation Techniques Used
-1️⃣ Content-Based Filtering
+### 2️⃣ Collaborative Filtering
+- User–Movie rating matrix construction  
+- Identifies similar users using Cosine Similarity  
+- Recommends movies liked by similar users  
 
-Uses TF-IDF Vectorization on movie genres
+### 3️⃣ Hybrid Recommendation System
+- Combines content-based and collaborative results  
+- Enhances personalization and recommendation quality  
 
-Computes similarity using Cosine Similarity
+---
 
-Recommends movies similar to the user’s favorite movie
+## 🛠️ Tech Stack
 
-2️⃣ Collaborative Filtering
+### Backend & Machine Learning
+- Python  
+- Flask  
+- Pandas  
+- NumPy  
+- Scikit-learn  
 
-Builds a User–Movie Rating Matrix
+### Frontend
+- HTML  
+- CSS  
+- JavaScript  
 
-Finds similar users using Cosine Similarity
+### Dataset
+- **MovieLens (Latest Small Dataset)**  
+- Provided by **GroupLens Research**
 
-Recommends movies liked by similar users
+---
 
-3️⃣ Hybrid Recommendation System
-
-Combines results from both content-based and collaborative filtering
-
-Improves personalization and recommendation quality
-
-🛠️ Tech Stack
-Backend & ML
-
-Python
-
-Flask
-
-Pandas
-
-NumPy
-
-Scikit-learn
-
-Frontend
-
-HTML
-
-CSS
-
-JavaScript
-
-Dataset
-
-MovieLens (Latest Small Dataset)
-Provided by GroupLens Research
-
-📂 Project Structure
+## 📂 Project Structure
+```
 Movie-Recommendation-System/
 │
-├── app.py                     # Flask backend
+├── app.py # Flask backend
 ├── src/
-│   ├── content_based.py
-│   ├── collaborative_filtering.py
-│   └── hybrid_recommender.py
+│ ├── content_based.py
+│ ├── collaborative_filtering.py
+│ └── hybrid_recommender.py
 │
 ├── data/
-│   ├── movies.csv
-│   └── ratings.csv
+│ ├── movies.csv
+│ └── ratings.csv
 │
 ├── templates/
-│   └── index.html
+│ └── index.html
 │
 ├── static/
-│   ├── style.css
-│   └── script.js
+│ ├── style.css
+│ └── script.js
 │
 ├── requirements.txt
 └── README.md
+```
 
-▶️ How to Run the Project Locally
-1️⃣ Clone the Repository
+---
+
+## ▶️ How to Run the Project Locally
+
+### 1️⃣ Clone the Repository
+```bash
 git clone https://github.com/ShriramSelvam/Movie-Recommendation-System.git
 cd Movie-Recommendation-System
-
-2️⃣ Install Dependencies
+```
+### 2️⃣ Install Dependencies
+```bash
 pip install -r requirements.txt
-
-3️⃣ Run the Flask App
+```
+### 3️⃣ Run the Flask App
+```bash
 python app.py
-
-4️⃣ Open in Browser
+```
+### 4️⃣ Open in Browser
+```cpp
 http://127.0.0.1:5000/
+```
 
-🧪 Sample Usage
+## 👨‍💻 Author
 
-Enter User ID (e.g., 1)
-
-Select a favorite movie from the dropdown
-
-Click Get Recommendations
-
-View personalized movie suggestions instantly
-
-📈 Future Enhancements
-
-🎯 Movie poster integration using external APIs
-
-👤 User login and profile management
-
-⭐ Rating predictions using Matrix Factorization (SVD)
-
-🌐 Cloud deployment with CI/CD
-
-📊 Recommendation evaluation metrics
-
-👨‍💻 Author
-
-Shriram Selvam
-
-GitHub: https://github.com/ShriramSelvam
-
-Interests: Full-Stack Development, Machine Learning, Software Engineering
-
-⭐ If you like this project
-
-Give it a ⭐ on GitHub — it really helps!
+- Shriram Selvam
