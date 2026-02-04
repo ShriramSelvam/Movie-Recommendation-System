@@ -6,11 +6,17 @@
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-    <div class="container">
+    <div class="card">
         <h1>🎬 Movie Recommendation System</h1>
 
         <input type="number" id="userId" placeholder="Enter User ID">
-        <input type="text" id="movieTitle" placeholder="Enter Favorite Movie">
+
+        <select id="movieTitle">
+            <option value="">Select a movie</option>
+            {% for movie in movies %}
+                <option value="{{ movie }}">{{ movie }}</option>
+            {% endfor %}
+        </select>
 
         <button onclick="getRecommendations()">Get Recommendations</button>
 

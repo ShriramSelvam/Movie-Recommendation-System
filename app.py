@@ -1,11 +1,16 @@
 from flask import Flask, render_template, request, jsonify
 from src.hybrid_recommender import hybrid_recommend
+import pandas as pd
 
 app = Flask(__name__)
 
+# Load movie titles once
+movies_df = pd.read_csv("data/movies.csv")
+movie_titles = sorted(movies_df['title'].tolist())
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('index.html', movies=movie_titles)
 
 @app.route('/recommend', methods=['POST'])
 def recommend():
