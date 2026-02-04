@@ -57,7 +57,7 @@ def hybrid_recommend(user_id, movie_title, top_n=5):
     collab_recs = collaborative_recommend(user_id, 10)
 
     combined = pd.concat([content_recs, collab_recs]).drop_duplicates()
-    return combined.head(top_n)['title']
+    return combined.head(top_n)['title'].tolist()
 
 # ---------- TEST ----------
 if __name__ == "__main__":
